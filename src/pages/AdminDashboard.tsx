@@ -96,14 +96,12 @@ export default function AdminDashboard() {
                   </div>
                 </div>
 
-                {student.adminRemarks && student.adminRemarks.length > 0 && (
+                {student.remark && (
                   <div className="mb-6 space-y-3">
                     <h4 className="text-sm font-bold text-gray-900 uppercase tracking-wider">Admin Remarks</h4>
-                    {student.adminRemarks.map((r: any, idx: number) => (
-                      <div key={idx} className="bg-white border-l-4 border-primary p-4 shadow-sm text-sm text-gray-800">
-                        {r.remark || r}
-                      </div>
-                    ))}
+                    <div className="bg-white border-l-4 border-primary p-4 shadow-sm text-sm text-gray-800">
+                      {student.remark}
+                    </div>
                   </div>
                 )}
 
