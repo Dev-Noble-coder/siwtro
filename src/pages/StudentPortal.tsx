@@ -55,6 +55,7 @@ export default function StudentPortal() {
     e.preventDefault();
     const payload = students.map(student => ({
       ...student,
+      matricNumber: student.matricNumber.toUpperCase(),
       phonenumber: Number(student.phonenumber),
       numberofemployer: Number(sharedDetails.numberofemployer),
       state: sharedDetails.state,
