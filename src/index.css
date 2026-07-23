@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', sans-serif;
+  --color-primary: #047857; /* Emerald 700 */
+  --color-background: #f0fdf4; /* Green 50 */
+}
+
+@layer base {
+  body {
+    @apply bg-background text-gray-900 font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .sharp-input {
+    @apply border border-gray-300 rounded-none bg-white px-4 py-2 focus:outline-none focus:border-primary transition-colors focus:ring-0;
+  }
+  .sharp-btn {
+    @apply bg-primary text-white rounded-full px-4 py-2 font-medium hover:bg-emerald-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+}
